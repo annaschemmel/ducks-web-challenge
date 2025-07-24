@@ -10,7 +10,7 @@ body {
 
 /* Put a selector here to select div elements (see index.html). */
 div {
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 8px;
   height: 150px;
   width: 150px;
