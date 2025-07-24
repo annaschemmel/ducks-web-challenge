@@ -9,9 +9,15 @@ body {
 }
 
 /* Put a selector here to select div elements (see index.html). */
-SELECTOR HERE {
-  font-family: cursive;
+div {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 8px;
+  height: 150px;
+  width: 150px;
+  background-color: hotpink;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
 
   /* Set the height and the width of the box to 150px. */
 
