@@ -32,18 +32,57 @@ Make sure not to put your code into the comments, because then nothing will happ
 
 .button1 {
   /* Style me! Change my border, set a border radius or try out other styles. :) */
+  background-color: transparent;
+  border-radius: 100px;
+  border: 2px solid darkolivegreen;
+  color: darkolivegreen;
+}
+.button1:hover {
+  background-color: darkolivegreen;
+  color: #fff;
 }
 
 .button2 {
   /* Style me! Change my color or background-color, or both! You can experiment with different color formats here, like HEX, RGB, etc. */
+  background-color: #000289;
+  border: none;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+}
+.button2:hover {
+  background-color: #030554;
 }
 
 .button3 {
   /* Style me! You can test out changing the font, font size, ...*/
+  font-family: cursive;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: darkred;
+  padding: 0;
+}
+.button3:hover {
+  text-decoration: underline;
 }
 
 .button4 {
   /* Style me! Can you add a shadow to this button? Try playing around with shadow properties - you can even change the shadow color, size, and more. */
+  font-weight: 700;
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 30px;
+  transition: 100ms;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.button4:hover {
+  background-color: #ec8200;
+  transform: translateY(3px);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* Feel free to play around with other properties, too. */
