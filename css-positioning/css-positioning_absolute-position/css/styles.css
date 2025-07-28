@@ -41,24 +41,24 @@ main {
 
 .box--top-left {
   background-color: #aed6f1;
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 .box--top-right {
   background-color: #5dade2;
-  top: 0;
   right: 0;
+  top: 0;
 }
 
 .box--bottom-left {
   background-color: #2874a6;
-  bottom: 0;
   left: 0;
+  bottom: 0;
 }
 
 .box--bottom-right {
   background-color: #1b4f72;
-  bottom: 0;
   right: 0;
+  bottom: 0;
 }
