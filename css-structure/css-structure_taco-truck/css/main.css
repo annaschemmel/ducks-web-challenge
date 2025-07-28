@@ -1,7 +1,5 @@
-@import "./theme.css";
-
 /* -------------------------------------------------------- */
-/* Global Styles */
+/* Main Styles */
 /* -------------------------------------------------------- */
 
 *::before,
@@ -17,19 +15,6 @@ body {
   font-family: system-ui, sans-serif;
   background: var(--body-bg);
 }
-
-.header {
-  position: sticky;
-  top: 0;
-  background: var(--header-bg);
-  color: var(--header-text);
-  padding: 20px;
-}
-
-.header__title {
-  margin: 0;
-}
-
 
 .main-content {
   background: var(--main-bg);
@@ -50,21 +35,4 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
- 
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--card-bg);
-  color: var(--card-text);
-  padding: 20px;
-  border-radius: 5px;
-  min-width: 300px; 
-  flex: 1 1 30%;
-}
-
-.card__title {
-  margin: 0 0 10px 0;
 }
