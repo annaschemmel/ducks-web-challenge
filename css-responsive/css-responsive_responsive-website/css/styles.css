@@ -146,9 +146,12 @@ body {
 .card-section {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--gap);
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* Product Card + Backgrounds */
@@ -239,11 +242,20 @@ body {
 CSS based on conditions such as viewport width, etc. */
 
 /* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+
+@media screen and (min-width: 800px) {
+  .intro-text {
+    width: 45%;
+  }
+  .product-card {
+    width: 45%;
+  }
+}
 
 /* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+
+@media screen and (min-width: 1200px) {
+  .product-card.--forest {
+    width: 100%;
+  }
+}
