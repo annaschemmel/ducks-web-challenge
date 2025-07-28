@@ -6,10 +6,14 @@
 
 /* Your solution */
 
+* {
+  box-sizing: border-box;
+}
+
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements in your code via inheritance. Which selector do we need for this? */
 
 /* Add selector */
- {
+* {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -19,6 +23,11 @@
 /* ------- Headings Part 1 ------- */
 
 /* Task 3: Setting the line height to 1.5 is good for texts, for accessibility reasons, but it seems too much for headings. Let's change this by giving our headings a line height of 1.2. */
+
+h1,
+h2 {
+  line-height: 1.2;
+}
 
 /* Your solution */
 
@@ -32,6 +41,10 @@
 
 .title {
   /* Your solution */
+  background-color: #fff;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 /* ------- Sections ------- */
@@ -46,6 +59,13 @@
 
 section {
   /* Your solution */
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-left: 5px solid orange;
+}
+section.favourites {
+  border-left: 5px solid blue;
 }
 
 /* ------- Headings Part 2 ------- */
@@ -60,6 +80,13 @@ section {
 
 .subtitle {
   /* Your solution */
+  border-right: 3px solid gold;
+  border-left: 3px solid gold;
+  padding: 0px 10px;
+  display: inline-block;
+}
+.favourites .subtitle {
+  border-color: orange;
 }
 
 /* ------- List ------- */
@@ -67,14 +94,14 @@ section {
 /* Task 7: Finally, let's style our list with of favorite Pokémon. Which selector do we need? Also, add values for padding. */
 
 /* Add selector */
- {
+.favourites ul {
   list-style: "🧡";
-  padding-left: /* Add value */ ;
+  padding-left: 15px;
 }
 
 /* Add selector */
- {
-  padding-left: /* Add value */ ;
+.favourites ul li {
+  padding-left: 10px;
 }
 
 /* ------- The End -------- */
