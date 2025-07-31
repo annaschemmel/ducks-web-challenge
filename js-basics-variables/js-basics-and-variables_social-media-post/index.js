@@ -10,6 +10,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const title = "My first post";
+const postContent =
+  "This will be my first and my last post on social media, thanks for your attention :)";
+let numberOfLikes = 23;
+const userName = "Jane";
+let isReported = false;
 
 // --^-- write your code here --^--
 
@@ -18,5 +24,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log(title);
+console.log(postContent);
+console.log(numberOfLikes);
+console.log(isReported);
+
+numberOfLikes++;
+console.log("New number of likes: " + numberOfLikes);
 
 // --^-- write your code here --^--
