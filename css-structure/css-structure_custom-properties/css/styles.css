@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-granite: #252629;
+  --color-nemo: #ff4a11;
+  --color-foam: #fff;
+  --color-purple: #8336ff7b;
+  --space-xs: 8px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}
+
 body {
   margin: 0;
   font-family: system-ui;
@@ -11,18 +22,17 @@ body {
 }
 
 header {
-  background: rgb(131 54 255/ 45%);
-  
+  background: var(--color-purple);
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--color-foam);
   line-height: 1.4;
   margin: 0;
   letter-spacing: 0.025em;
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--space-md);
 }
 
 h2 {
@@ -30,14 +40,14 @@ h2 {
 }
 
 strong {
-  color: #ff4a11;
+  color: var(--color-nemo);
 }
 
 section {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
-  padding: 16px;
+  gap: var(--space-lg);
+  padding: var(--space-md);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -55,46 +65,46 @@ figure {
   width: min(100%, 400px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-sm);
   margin: 0;
-  padding: 10px;
-  background-color: #ff4a11ff;
+  padding: var(--space-sm);
+  background-color: var(--color-nemo);
   border-radius: 4px;
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--color-foam);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--space-xs) var(--space-md);
 }
 
 a {
   display: inline-block;
   font-size: smaller;
-  padding: 8px;
+  padding: var(--space-xs);
   border-radius: 4px;
-  background-color: hsl(14 100% 53%);
-  color: #fff;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }
 
 a:hover,
 a:focus-visible {
-  background-color: #8336ff7b;
+  background-color: var(--color-purple);
   text-decoration: none;
 }
 
 mark {
-  background-color: rgb(255 74 17);
-  color: #ffffff;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
   border-radius: 4px;
   letter-spacing: 0.025em;
 }
 
 ::selection {
-  background-color: #252629;
-  color: #ff4a11;
+  background-color: var(--color-granite);
+  color: var(--color-nemo);
 }
