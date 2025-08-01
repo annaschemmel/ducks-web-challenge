@@ -26,17 +26,14 @@ let totalCost;
 
 if (numberOfHotdogs < 5) {
   totalCost = numberOfHotdogs * 2;
-  console.log("Total cost: " + totalCost + "€");
 } else if (numberOfHotdogs >= 5 && numberOfHotdogs < 100) {
   totalCost = numberOfHotdogs * 1.5;
-  console.log("Total cost: " + totalCost + "€");
 } else if (numberOfHotdogs >= 100 && numberOfHotdogs < 1000000) {
   totalCost = numberOfHotdogs * 1;
-  console.log("Total cost: " + totalCost + "€");
 } else {
   totalCost = numberOfHotdogs * 0.1;
-  console.log("Total cost: " + totalCost + "€");
 }
+console.log("Total cost: " + totalCost + "€");
 
 // Part 4: Daytime
 const currentHour = 12;
