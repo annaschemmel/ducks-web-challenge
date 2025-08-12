@@ -23,6 +23,7 @@ Update the content and style of the page based on the current day and time.
 const display = document.querySelector('[data-js="display"]');
 console.log(display);
 
+// ----------------Times------------------
 function getGreeting(currentTime) {
   // Code here
   if (currentTime > 5 && currentTime <= 12) {
@@ -35,13 +36,24 @@ function getGreeting(currentTime) {
     display.textContent = "Good Night";
   }
 }
+getGreeting(new Date().getHours());
 
-getGreeting(6);
+// ----------------Colours------------------
 
-// function getDayColor() {
-//   // Code here
-// }
+function getDayColor(currentDay) {
+  // Code here
+  if (currentDay == 1) {
+    document.body.style.backgroundColor = "darkgray";
+  } else if (
+    currentDay == 2 ||
+    currentDay == 3 ||
+    currentDay == 4 ||
+    currentDay == 5
+  ) {
+    document.body.style.backgroundColor = "lightblue";
+  } else if (currentDay == 6 || currentDay == 7) {
+    document.body.style.backgroundColor = "hotpink";
+  }
+}
 
-// display.textContent = getGreeting();
-
-// document.body.style.backgroundColor = getDayColor();
+document.body.style.backgroundColor = getDayColor(new Date().getDay());
