@@ -12,11 +12,22 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+tosCheckbox.addEventListener("change", () => {
+  tosError.toggleAttribute("hidden");
+});
+// ^ toggle error message depending on if the check box is checked or not,
+// before the form is submitted
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // --v-- write your code here --v--
-
+  if (tosCheckbox.checked) {
+    hideTosError();
+  } else {
+    showTosError();
+    return;
+  }
   // --^-- write your code here --^--
 
   // eslint-disable-next-line no-alert
