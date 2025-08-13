@@ -13,13 +13,10 @@ likeButton.addEventListener("click", handleLikeButtonClick);
 // Exercise:
 // Use document.createElement() and append another social media post to the body.
 
-const body = document.getElementsByTagName("body")[0];
-//const body = document.querySelector('[data-js="body"]');
-console.log(body);
+//const body = document.getElementsByTagName("body")[0]; // we can append it directly to body at the bottom without having to create a variable for it first
 
 const newPost = document.createElement("article");
 newPost.classList.add("post");
-newPost.setAttribute("data-js", "like-button-2");
 
 const postContent = document.createElement("p");
 postContent.classList.add("post__content");
@@ -36,9 +33,10 @@ userName.textContent = "@username";
 const postButton = document.createElement("button");
 postButton.classList.add("post__button");
 postButton.setAttribute("type", "button");
-postButton.setAttribute("data-js", "like-button");
+//postButton.setAttribute("data-js", "like-button"); // we don't need this cause the post button is already created in JS so it can be targeted immediately
 postButton.textContent = "♥ Like";
+postButton.addEventListener("click", handleLikeButtonClick);
 
 footer.append(userName, postButton);
 newPost.append(postContent, footer);
-body.append(newPost);
+document.body.append(newPost);
