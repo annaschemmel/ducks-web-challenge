@@ -1,5 +1,6 @@
 console.clear();
 
+// ----------Product information------------
 const name = "Queen angelfish";
 const description =
   "With their bright colors and deep, laterally compressed bodies, marine angelfishes are some of the more conspicuous residents of the aquarium. The queen angelfish grows to be 45 cm. With neon blue and yellow scales and iridescent purple and orange markings, surprisingly it is not conspicuous, and actually hides very well, and is very shy.";
@@ -10,33 +11,45 @@ const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
+// ----------create new card and append to body------------
 const newProduct = document.createElement("article");
 newProduct.classList.add("product");
 newProduct.innerHTML = `
   <section class="product__body">
-        <div class="product__text-container">
-          <h2 class="product__name">${name}</h2>
-          <ul class="product__categories">
-            <li class="product__category">${category1}</li>
-            <li class="product__category">${category2}</li>
-            <li class="product__category">${category3}</li>
-          </ul>
-          <p class="product__description">
-            ${description}
-          </p>
-        </div>
-        <div class="product__image-container">
-          <img
-            class="product__image"
-            src="${imageSrc}"
-            alt=""
-          />
-        </div>
-      </section>
-      <footer class="product__footer">
-        <span class="product__price">${price}</span>
-        <button type="button" class="product__buy-button">Buy</button>
-      </footer>
+  <div class="product__text-container">
+  <h2 class="product__name">${name}</h2>
+  <ul class="product__categories">
+  <li class="product__category">${category1}</li>
+  <li class="product__category">${category2}</li>
+  <li class="product__category">${category3}</li>
+  </ul>
+  <p class="product__description">
+  ${description}
+  </p>
+  </div>
+  <div class="product__image-container">
+  <img
+  class="product__image"
+  src="${imageSrc}"
+  alt=""
+  />
+  </div>
+  </section>
+  <footer class="product__footer">
+  <span class="product__price">${price}</span>
+  <button type="button" class="product__buy-button" data-js="buy-button">Buy</button>
+  </footer>
   `;
 
 document.body.append(newProduct);
+
+// ----------click buy to log infos to console function------------
+
+const buyButton = document.querySelector('[data-js="buy-button"]');
+//console.log(buyButton);
+function logInfo(event) {
+  event.preventDefault();
+  console.log("Product-Name: ", name);
+  console.log("Price: ", price);
+}
+buyButton.addEventListener("click", logInfo);
