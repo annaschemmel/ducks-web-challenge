@@ -8,6 +8,9 @@ Make sure to export your variable as shown in the example below to make the test
 
 const item = ["Egg", 0.25, 12];
 
+export const [name, price, quantity] = item;
+console.log(name, price, quantity);
+
 // Example: export const [ value1, value2 ] = array;
 
 /*
@@ -17,6 +20,9 @@ Use array destructuring to extract the variables `firstNameOfChris`, `lastNameOf
 
 const personChris = [12, "Chris", "Owen"];
 
+export const [, firstNameOfChris, lastNameOfChris] = personChris;
+console.log(firstNameOfChris, lastNameOfChris);
+
 /*
 EXERCISE 3
 Use array destructuring to extract the variables `firstNameOfAlex` and `lastNameOfAlex`.
@@ -25,6 +31,9 @@ Ensure no unused variables remain.
 
 const personAlex = ["Alex", 12, "Main"];
 
+export const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
+console.log(firstNameOfAlex, lastNameOfAlex);
+
 /*
 EXERCISE 4
 Use array destructuring to extract the last name from the array
@@ -32,6 +41,8 @@ as variable called `lastName`.
 */
 
 const students = ["Christina", "Jon", "Alexandare"];
+export const [, , lastName] = students;
+console.log(lastName);
 
 /*
 EXERCISE 5
