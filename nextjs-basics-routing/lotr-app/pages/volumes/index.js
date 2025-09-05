@@ -1,4 +1,5 @@
 import { volumes } from "@/resources/lib/data";
+import { introduction } from "@/resources/lib/data";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -10,14 +11,16 @@ export default function Volumes() {
         <title>LOTR Volumes</title>
       </Head>
       <main>
-        <h1>LOTR Volumes</h1>
-        <section>
+        <h1>Lord of the Rings</h1>
+        <p>{introduction}</p>
+        <h2>All Volumes</h2>
+        <ul>
           {volumes.map((volumes, index) => (
-            <Link href={`/volumes/${volumes.slug}`} key={index}>
-              <h2>{volumes.title}</h2>
-            </Link>
+            <li key={index}>
+              <Link href={`/volumes/${volumes.slug}`}>{volumes.title}</Link>
+            </li>
           ))}
-        </section>
+        </ul>
       </main>
     </>
   );
