@@ -13,6 +13,13 @@ const StyledList = styled.ul`
   gap: 1rem;
 `;
 
+const NavLink = styled.a`
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -20,13 +27,13 @@ export default function App({ Component, pageProps }) {
       <StyledNav>
         <StyledList>
           <li>
-            <Link href="/">Home</Link>
+            <NavLink href="/">Home</NavLink>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <NavLink href="/about">About</NavLink>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <NavLink href="/contact">Contact</NavLink>
           </li>
         </StyledList>
       </StyledNav>
