@@ -3,9 +3,11 @@ import FontSelector from "./components/FontSelector";
 import Note from "./components/Note";
 import "./styles.css";
 
+import useLocalStorageState from "use-local-storage-state";
+
 export default function App() {
-  const [note, setNote] = useState("");
-  const [font, setFont] = useState("system-ui");
+  const [note, setNote] = useLocalStorageState("note", { defaultValue: "" }); // useState("");
+  const [font, setFont] = useLocalStorageState("font", { defaultValue: 0 }); //useState("system-ui");
 
   function handleNoteChange(newNote) {
     setNote(newNote);
