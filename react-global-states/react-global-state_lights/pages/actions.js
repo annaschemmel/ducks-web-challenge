@@ -1,14 +1,7 @@
 import Link from "../components/Link";
 import QuickActions from "../components/QuickActions";
 
-export default function Actions({ isOn }) {
-  function handleTurnOff() {
-    setIsOn((isOn) => false);
-  }
-  function handleTurnOn() {
-    setIsOn((isOn) => true);
-  }
-
+export default function Actions({ lights, handleTurnOff, handleTurnOn }) {
   return (
     <>
       <Link href="/">← Back home</Link>
@@ -16,7 +9,7 @@ export default function Actions({ isOn }) {
       <QuickActions
         handleTurnOff={handleTurnOff}
         handleTurnOn={handleTurnOn}
-        isOn={isOn}
+        lights={lights}
       />
     </>
   );

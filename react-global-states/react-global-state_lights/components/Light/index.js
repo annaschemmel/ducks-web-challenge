@@ -1,18 +1,12 @@
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
 
-export default function Light({ name, handleToggle, isOn }) {
+export default function Light({ name, handleToggle, light }) {
   return (
-    <LightButton
-      type="button"
-      onClick={() => {
-        handleToggle();
-      }}
-      $isOn={isOn}
-    >
-      <Icon $isOn={isOn}>💡</Icon>
+    <LightButton type="button" onClick={handleToggle} $isOn={light.isOn}>
+      <Icon $isOn={light.isOn}>💡</Icon>
       <Text>
-        <Name>{name}</Name>
-        <State>{isOn ? "On" : "Off"}</State>
+        <Name>{light.name}</Name>
+        <State>{light.isOn ? "On" : "Off"}</State>
       </Text>
     </LightButton>
   );

@@ -1,11 +1,10 @@
 import Link from "../components/Link";
 
-export default function HomePage({ isOn }) {
-  console.log(isOn);
+export default function HomePage({ lights }) {
   return (
     <div>
       <h1>Home</h1>
-      <p>{isOn} light(s) are on.</p>
+      <p>{lights.filter((light) => light.isOn).length} light(s) are on.</p>
       <p>
         <Link href="/rooms">All Rooms →</Link>
       </p>
